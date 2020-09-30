@@ -1,4 +1,5 @@
 //Dependencies
+require("dotenv").config();
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -19,4 +20,6 @@ const connectionHandler = (socket) => {
 io.on("connection", connectionHandler);
 //Server Run
 const port = process.env.PORT;
-server.listen(port, () => console.log(`server is running on port ${port}`));
+server.listen(process.env.PORT, () =>
+  console.log(`server is running on port ${process.env.PORT}`)
+);
