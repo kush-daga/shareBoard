@@ -18,5 +18,5 @@ const connectionHandler = (socket) => {
 //IO
 io.on("connection", connectionHandler);
 //Server Run
-const port = 8080;
+const port = process.env.PORT;
 server.listen(port, () => console.log(`server is running on port ${port}`));
