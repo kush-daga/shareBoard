@@ -66,7 +66,6 @@ export default function Canvas() {
     };
 
     const onMouseMove = (e) => {
-      e.preventDefault();
       if (!drawing) {
         return;
       }
