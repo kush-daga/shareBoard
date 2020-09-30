@@ -137,7 +137,9 @@ export default function Canvas() {
       drawLine(data.x0 * w, data.y0 * h, data.x1 * w, data.y1 * h, data.color);
     };
 
-    socketRef.current = io.connect("192.168.1.7:8080");
+    socketRef.current = io.connect(process.env.REACT_APP_BACKEND_URL);
+    // socketRef.current = io.connect("192.168.1.7:8080");
+
     socketRef.current.on("drawing", onDrawingEvent);
   }, []);
   return (
