@@ -138,7 +138,6 @@ export default function Canvas() {
     };
 
     socketRef.current = io.connect(process.env.REACT_APP_BACKEND_URL);
-    // socketRef.current = io.connect("192.168.1.7:8080");
 
     socketRef.current.on("drawing", onDrawingEvent);
   }, []);
